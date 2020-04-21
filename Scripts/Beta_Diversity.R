@@ -14,7 +14,7 @@ lines(lowess(log10(gdist), beta), col='red')
 abline(mod, col='dodgerblue')
         ##mod <- lm(beta ~ gdist)
 
-jac <- vegdist(beta, 'jaccard')
+jac <- log(1-vegdist(beta, 'jaccard'))
 jac
 
 ##play with plotting, mantel correlolgrams
